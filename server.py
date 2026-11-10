@@ -57,13 +57,16 @@ input,select{padding:9px;margin:4px 0;width:100%;box-sizing:border-box}
 <input id="ws" placeholder="Service (e.g. General Consultation (GP))">
 <button onclick="walkin()">Issue token</button>
 <p class="small">Patients can also chat with the agent on the home page; bookings made there are saved by the agent.</p>
-</div></div></div>
+</div></div>
+<div class="col" style="margin-top:14px"><h3>Appointments booked via chat</h3><div id="appts"></div></div></div>
 <script>
 async function load(){const r=await fetch('/api/queue');const q=await r.json();
 document.getElementById('tok').textContent=q.now_serving?q.now_serving.token:'--';
 document.getElementById('who').textContent=q.now_serving?(q.now_serving.patient+' - '+q.now_serving.service):'No patient called yet';
 document.getElementById('wait').innerHTML=q.waiting.map(w=>'<div class="row"><span><b>'+w.token+'</b> '+w.patient+'</span><span>'+w.service+'</span></div>').join('')||'<p class="small">Nobody waiting</p>';
-document.getElementById('counts').textContent='Waiting: '+q.waiting_count+' | Served today: '+q.served_count+' | Total tokens: '+q.total_today;}
+document.getElementById('counts').textContent='Waiting: '+q.waiting_count+' | Served today: '+q.served_count+' | Total tokens: '+q.total_today;
+const rb=await fetch('/api/bookings');const bk=await rb.json();
+document.getElementById('appts').innerHTML=bk.length?bk.map(b=>'<div class="row"><span><b>'+b.id+'</b> '+b.patient_name+'</span><span>'+b.service+' - '+b.date+' at '+b.time+'</span></div>').join(''):'<p class="small">No chat bookings yet</p>';}
 async function act(p){await fetch(p,{method:'POST',headers:{'Content-Type':'application/json'},body:'{}'});load();}
 async function walkin(){const n=document.getElementById('wn').value.trim(),s=document.getElementById('ws').value.trim();
 if(!n||!s)return alert('Name and service needed');
@@ -118,6 +121,13 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(200, BOARD_PAGE, "text/html")
         if self.path == "/api/queue":
             return self._send(200, json.dumps(queue.status()), "application/json")
+        if self.path == "/api/bookings":
+            from agent.core import BOOKINGS_FILE
+            data = []
+            if os.path.exists(BOOKINGS_FILE):
+                with open(BOOKINGS_FILE, encoding="utf-8") as f:
+                    data = json.load(f)
+            return self._send(200, json.dumps(data), "application/json")
         if self.path.startswith("/webhook"):
             from urllib.parse import urlparse, parse_qs
             q = parse_qs(urlparse(self.path).query)
