@@ -1,0 +1,182 @@
+{
+  "business_name": "CityCare Hospital",
+  "tagline": "OPD, gynae and paeds - one number for the whole hospital",
+  "city": "Faisalabad",
+  "address": "88 Satiana Road, Faisalabad",
+  "phone": "041-8500000",
+  "whatsapp": "0301-0000000",
+  "handoff_phone": "0301-0000000",
+  "currency": "PKR",
+  "sample_data": true,
+  "hours": {
+    "monday": "8:00 AM - 10:00 PM (OPD)",
+    "tuesday": "8:00 AM - 10:00 PM (OPD)",
+    "wednesday": "8:00 AM - 10:00 PM (OPD)",
+    "thursday": "8:00 AM - 10:00 PM (OPD)",
+    "friday": "8:00 AM - 1:00 PM, 3:00 PM - 10:00 PM",
+    "saturday": "8:00 AM - 10:00 PM (OPD)",
+    "sunday": "Emergency only"
+  },
+  "open_windows": {
+    "Mon": [
+      [
+        "08:00",
+        "22:00"
+      ]
+    ],
+    "Tue": [
+      [
+        "08:00",
+        "22:00"
+      ]
+    ],
+    "Wed": [
+      [
+        "08:00",
+        "22:00"
+      ]
+    ],
+    "Thu": [
+      [
+        "08:00",
+        "22:00"
+      ]
+    ],
+    "Fri": [
+      [
+        "08:00",
+        "13:00"
+      ],
+      [
+        "15:00",
+        "22:00"
+      ]
+    ],
+    "Sat": [
+      [
+        "08:00",
+        "22:00"
+      ]
+    ],
+    "Sun": []
+  },
+  "services": [
+    {
+      "name": "OPD Consultation",
+      "fee": 1000,
+      "duration_min": 15,
+      "provider": "opd"
+    },
+    {
+      "name": "Gynae Consultation",
+      "fee": 2000,
+      "duration_min": 20,
+      "provider": "gynae"
+    },
+    {
+      "name": "Paeds Consultation",
+      "fee": 1200,
+      "duration_min": 15,
+      "provider": "paeds"
+    },
+    {
+      "name": "Blood Tests (lab)",
+      "fee": 0,
+      "duration_min": 10,
+      "provider": "lab",
+      "note": "Most routine tests are free; reports in 24 hours"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "opd",
+      "kind": "department",
+      "name": "OPD",
+      "specialty": "General outpatient",
+      "timings": "Mon-Sat 8 AM - 10 PM",
+      "schedule": {
+        "days": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "start": "08:00",
+        "end": "22:00",
+        "fri_end": "13:00"
+      }
+    },
+    {
+      "id": "gynae",
+      "kind": "doctor",
+      "name": "Dr. Nadia Rahman",
+      "specialty": "Gynaecologist",
+      "timings": "Mon, Wed, Fri, Sat 5 PM - 9 PM",
+      "schedule": {
+        "days": [
+          "Mon",
+          "Wed",
+          "Fri",
+          "Sat"
+        ],
+        "start": "17:00",
+        "end": "21:00"
+      }
+    },
+    {
+      "id": "paeds",
+      "kind": "doctor",
+      "name": "Dr. Omar Farooq",
+      "specialty": "Paediatrician",
+      "timings": "Mon-Sat 4 PM - 8 PM",
+      "schedule": {
+        "days": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "start": "16:00",
+        "end": "20:00"
+      }
+    },
+    {
+      "id": "lab",
+      "kind": "department",
+      "name": "Lab",
+      "specialty": "Laboratory",
+      "timings": "During hospital hours",
+      "schedule": {
+        "days": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "start": "08:00",
+        "end": "22:00"
+      }
+    }
+  ],
+  "instant_token_providers": [
+    "opd",
+    "lab"
+  ],
+  "faqs": [
+    {
+      "q": [
+        "parking"
+      ],
+      "a": "A paid parking lot is available in the hospital basement."
+    }
+  ],
+  "policies": {
+    "cancellation": "Please cancel at least 2 hours before your slot."
+  }
+}

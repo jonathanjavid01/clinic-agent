@@ -1,1 +1,213 @@
-{"address":"12-B Main Jaranwala Road, Near Allied Hospital, Faisalabad","business_name":"CarePoint Clinic & Dental Studio","city":"Faisalabad","doctors":[{"days":"Mon-Sat","name":"Dr. Ayesha Khan","role":"General Physician","timings":"9 AM - 2 PM"},{"days":"Mon-Sat","name":"Dr. Bilal Ahmed","role":"Dental Surgeon","timings":"3 PM - 9 PM"},{"days":"Mon, Wed, Fri","name":"Dr. Sara Malik","role":"Dermatologist","timings":"5 PM - 8 PM"}],"faqs":[{"a":"Walk-ins are welcome for GP consultations, but booking ahead guarantees your slot and avoids waiting. Dental and skin appointments are by booking only.","q":"Do I need an appointment or can I walk in?"},{"a":"We accept cash, debit/credit cards, JazzCash and Easypaisa.","q":"What payment methods do you accept?"},{"a":"Yes, free parking is available in front of the clinic.","q":"Is there parking available?"},{"a":"GP home visits are available within Faisalabad city limits for an additional fee of PKR 1,500. Please call us to arrange one.","q":"Do you offer home visits?"},{"a":"Lab reports are shared on WhatsApp within 24 hours and printed copies can be collected from reception.","q":"How do I get my lab reports?"},{"a":"Please bring your CNIC and any previous medical reports or prescriptions related to your condition.","q":"What should I bring for my first visit?"}],"handoff_phone":"0300-0000000","hours":{"friday":"9:00 AM - 1:00 PM, 3:00 PM - 9:00 PM","monday":"9:00 AM - 9:00 PM","saturday":"9:00 AM - 9:00 PM","sunday":"Closed","thursday":"9:00 AM - 9:00 PM","tuesday":"9:00 AM - 9:00 PM","wednesday":"9:00 AM - 9:00 PM"},"languages_note":"Replies in English; understands simple Roman Urdu.","phone":"041-8710000","policies":{"cancellation":"Appointments can be rescheduled free of charge up to 2 hours before the slot.","late":"If you are more than 15 minutes late, your slot may be given to a waiting patient."},"sample_data":true,"services":[{"duration_min":15,"fee_pkr":800,"name":"General Consultation (GP)"},{"duration_min":30,"fee_pkr":2500,"name":"Dental Checkup & Cleaning"},{"duration_min":45,"fee_pkr":4000,"name":"Dental Filling"},{"duration_min":60,"fee_pkr":6000,"name":"Root Canal (per visit)"},{"duration_min":20,"fee_pkr":1500,"name":"Skin Consultation"},{"duration_min":10,"fee_pkr":0,"name":"Blood Tests (lab)","note":"Lab rates vary by test; reports in 24 hours"}],"tagline":"Family medicine, dentistry and skin care under one roof","whatsapp":"0300-0000000"}
+{
+  "address": "12-B Main Jaranwala Road, Near Allied Hospital, Faisalabad",
+  "business_name": "CarePoint Clinic & Dental Studio",
+  "city": "Faisalabad",
+  "doctors": [
+    {
+      "name": "Dr. Ayesha Khan",
+      "timings": "Mon-Sat 9 AM - 2 PM (Fri till 1 PM)",
+      "id": "gp",
+      "schedule": {
+        "days": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "start": "09:00",
+        "end": "14:00",
+        "fri_end": "13:00"
+      },
+      "kind": "doctor",
+      "specialty": "General Physician"
+    },
+    {
+      "name": "Dr. Bilal Ahmed",
+      "timings": "Mon-Sat 3 PM - 9 PM",
+      "id": "dental",
+      "schedule": {
+        "days": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "start": "15:00",
+        "end": "21:00"
+      },
+      "kind": "doctor",
+      "specialty": "Dental Surgeon"
+    },
+    {
+      "name": "Dr. Sara Malik",
+      "timings": "Mon, Wed, Fri 5 PM - 8 PM",
+      "id": "skin",
+      "schedule": {
+        "days": [
+          "Mon",
+          "Wed",
+          "Fri"
+        ],
+        "start": "17:00",
+        "end": "20:00"
+      },
+      "kind": "doctor",
+      "specialty": "Dermatologist"
+    },
+    {
+      "id": "lab",
+      "name": "Lab",
+      "specialty": "Laboratory",
+      "timings": "During clinic hours",
+      "schedule": {
+        "days": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "start": "09:00",
+        "end": "21:00"
+      },
+      "kind": "department"
+    }
+  ],
+  "faqs": [
+    {
+      "a": "Walk-ins are welcome for GP consultations, but booking ahead guarantees your slot and avoids waiting. Dental and skin appointments are by booking only.",
+      "q": "Do I need an appointment or can I walk in?"
+    },
+    {
+      "a": "We accept cash, debit/credit cards, JazzCash and Easypaisa.",
+      "q": "What payment methods do you accept?"
+    },
+    {
+      "a": "Yes, free parking is available in front of the clinic.",
+      "q": "Is there parking available?"
+    },
+    {
+      "a": "GP home visits are available within Faisalabad city limits. Please call us to arrange one and confirm the charges.",
+      "q": "Do you offer home visits?"
+    },
+    {
+      "a": "Lab reports are shared on WhatsApp within 24 hours and printed copies can be collected from reception.",
+      "q": "How do I get my lab reports?"
+    },
+    {
+      "a": "Please bring your CNIC and any previous medical reports or prescriptions related to your condition.",
+      "q": "What should I bring for my first visit?"
+    }
+  ],
+  "handoff_phone": "0300-0000000",
+  "hours": {
+    "friday": "9:00 AM - 1:00 PM, 3:00 PM - 9:00 PM",
+    "monday": "9:00 AM - 9:00 PM",
+    "saturday": "9:00 AM - 9:00 PM",
+    "sunday": "Closed",
+    "thursday": "9:00 AM - 9:00 PM",
+    "tuesday": "9:00 AM - 9:00 PM",
+    "wednesday": "9:00 AM - 9:00 PM"
+  },
+  "languages_note": "Replies in English; understands simple Roman Urdu.",
+  "phone": "041-8710000",
+  "policies": {
+    "cancellation": "Appointments can be rescheduled free of charge up to 2 hours before the slot.",
+    "late": "If you are more than 15 minutes late, your slot may be given to a waiting patient."
+  },
+  "sample_data": true,
+  "services": [
+    {
+      "duration_min": 15,
+      "name": "General Consultation (GP)",
+      "provider": "gp",
+      "fee": 800
+    },
+    {
+      "duration_min": 30,
+      "name": "Dental Checkup & Cleaning",
+      "provider": "dental",
+      "fee": 2500
+    },
+    {
+      "duration_min": 45,
+      "name": "Dental Filling",
+      "provider": "dental",
+      "fee": 4000
+    },
+    {
+      "duration_min": 60,
+      "name": "Root Canal (per visit)",
+      "provider": "dental",
+      "fee": 6000
+    },
+    {
+      "duration_min": 20,
+      "name": "Skin Consultation",
+      "provider": "skin",
+      "fee": 1500
+    },
+    {
+      "duration_min": 10,
+      "name": "Blood Tests (lab)",
+      "note": "Lab rates vary by test; reports in 24 hours",
+      "provider": "lab",
+      "fee": 0
+    }
+  ],
+  "tagline": "Family medicine, dentistry and skin care under one roof",
+  "whatsapp": "0300-0000000",
+  "open_windows": {
+    "Mon": [
+      [
+        "09:00",
+        "21:00"
+      ]
+    ],
+    "Tue": [
+      [
+        "09:00",
+        "21:00"
+      ]
+    ],
+    "Wed": [
+      [
+        "09:00",
+        "21:00"
+      ]
+    ],
+    "Thu": [
+      [
+        "09:00",
+        "21:00"
+      ]
+    ],
+    "Fri": [
+      [
+        "09:00",
+        "13:00"
+      ],
+      [
+        "15:00",
+        "21:00"
+      ]
+    ],
+    "Sat": [
+      [
+        "09:00",
+        "21:00"
+      ]
+    ],
+    "Sun": []
+  },
+  "instant_token_providers": [
+    "gp",
+    "lab"
+  ],
+  "currency": "PKR"
+}

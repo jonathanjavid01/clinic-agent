@@ -1,0 +1,131 @@
+{
+  "business_name": "Dr. Imran Sheikh - Family Clinic",
+  "tagline": "One doctor, personal care - no rush, no queue chaos",
+  "city": "Lahore",
+  "address": "14-C Main Boulevard, Gulberg III, Lahore",
+  "phone": "042-35770000",
+  "whatsapp": "0321-0000000",
+  "handoff_phone": "0321-0000000",
+  "currency": "PKR",
+  "sample_data": true,
+  "hours": {
+    "monday": "10:00 AM - 2:00 PM, 5:00 PM - 9:00 PM",
+    "tuesday": "10:00 AM - 2:00 PM, 5:00 PM - 9:00 PM",
+    "wednesday": "10:00 AM - 2:00 PM, 5:00 PM - 9:00 PM",
+    "thursday": "10:00 AM - 2:00 PM, 5:00 PM - 9:00 PM",
+    "friday": "10:00 AM - 1:00 PM",
+    "saturday": "10:00 AM - 2:00 PM",
+    "sunday": "Closed"
+  },
+  "open_windows": {
+    "Mon": [
+      [
+        "10:00",
+        "14:00"
+      ],
+      [
+        "17:00",
+        "21:00"
+      ]
+    ],
+    "Tue": [
+      [
+        "10:00",
+        "14:00"
+      ],
+      [
+        "17:00",
+        "21:00"
+      ]
+    ],
+    "Wed": [
+      [
+        "10:00",
+        "14:00"
+      ],
+      [
+        "17:00",
+        "21:00"
+      ]
+    ],
+    "Thu": [
+      [
+        "10:00",
+        "14:00"
+      ],
+      [
+        "17:00",
+        "21:00"
+      ]
+    ],
+    "Fri": [
+      [
+        "10:00",
+        "13:00"
+      ]
+    ],
+    "Sat": [
+      [
+        "10:00",
+        "14:00"
+      ]
+    ],
+    "Sun": []
+  },
+  "services": [
+    {
+      "name": "Consultation",
+      "fee": 1500,
+      "duration_min": 15,
+      "provider": "gp"
+    },
+    {
+      "name": "Follow-up Visit",
+      "fee": 800,
+      "duration_min": 10,
+      "provider": "gp"
+    },
+    {
+      "name": "ECG",
+      "fee": 1000,
+      "duration_min": 10,
+      "provider": "gp"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "gp",
+      "kind": "doctor",
+      "name": "Dr. Imran Sheikh",
+      "specialty": "Family Physician",
+      "timings": "Mon-Thu 10 AM - 2 PM & 5 - 9 PM, Fri 10 AM - 1 PM, Sat 10 AM - 2 PM",
+      "schedule": {
+        "days": [
+          "Mon",
+          "Tue",
+          "Wed",
+          "Thu",
+          "Fri",
+          "Sat"
+        ],
+        "start": "10:00",
+        "end": "21:00",
+        "fri_end": "13:00"
+      }
+    }
+  ],
+  "instant_token_providers": [
+    "gp"
+  ],
+  "faqs": [
+    {
+      "q": [
+        "parking"
+      ],
+      "a": "Street parking is available outside the clinic."
+    }
+  ],
+  "policies": {
+    "cancellation": "Please cancel at least 2 hours before your slot."
+  }
+}
